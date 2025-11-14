@@ -120,6 +120,7 @@ header div a{
 main > section:nth-child(1) {
   width: 80%;
   min-height: 125vh; /* ocupa toda la altura visible */
+  max-height: 150vh;
   position: relative;
   text-align: center;
   display: flex;
