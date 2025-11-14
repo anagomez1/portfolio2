@@ -64,6 +64,16 @@ header{
     justify-content: space-between;
     gap:2rem;
     margin: 0;
+
+
+  align-self: stretch; /* fuerza a ocupar todo el ancho del contenedor */
+
+svg{
+width: 20px;
+height: 15px;
+margin-right: 10px;
+vertical-align: middle;
+}
 }
 
 h3{
@@ -102,15 +112,18 @@ header div a{
 }
 
 main > section:nth-child(1) {
-    width: 80%;
-    height: 80%;
-  position: relative; 
+  width: 80%;
+  min-height: 125vh; /* ocupa toda la altura visible */
+  position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 800px; 
+  background-image: url('tu-imagen.jpg');
+  background-size: cover; /* mantiene proporción y cubre */
+  background-position: center;
+  background-repeat: no-repeat;
 
   & > img {
     position: absolute;
@@ -147,7 +160,6 @@ img{
 }
  article {
   background-color: var(--secondary-bg);
-  width:80%;
   padding: 2rem;
   margin-bottom: 16px;
   border-radius: 0.5rem;
@@ -178,24 +190,70 @@ img{
 
 
 .texto{
-    width:100%;
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    display:flex;
+    flex-direction: column;
     gap:30px;
     margin-top: -90px;
 }
+
 main, section {
   width: auto;
   margin: 0 auto;
 }
 
-header {
-  align-self: stretch; /* fuerza a ocupar todo el ancho del contenedor */
+.texto1{
+  margin-top: -90px;
+  width:80%;
 }
 
-header svg{
-width: 20px;
-height: 15px;
-margin-right: 10px;
- vertical-align: middle;
+.texto2{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  gap: 5rem;
+
+article{
+  align-items: stretch;
+  margin-bottom: 100px;
+
+}
+}
+
+
+.extra{
+  display: none;
+}
+
+input[type="checkbox"]{
+  height: 1em;
+  display: block;
+  appearance: none;
+}
+
+label{
+  position: relative;
+  color:var(--secondary-lt);
+  font-style: italic;
+  cursor: pointer;
+}
+
+label::before{
+  content: "Leer más"
+}
+
+input[type="checkbox"]:checked~label::before{
+  content: "Leer menos";
+}
+
+
+.dots:has(~input[type="checkbox"]:checked){
+  display:none;
+}
+
+.extra:has(~input[type="checkbox"]:checked){
+    display: block;
+    text-wrap: balance;
+    margin-bottom: 2rem;
 }
