@@ -126,23 +126,22 @@ nav {
 
 
 .imagen {
-    top: 0;
-    left: 0;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-    mask-image: linear-gradient(to bottom,
-        rgba(16, 25, 34, 1) 5%,
-        rgba(16, 25, 34, 0) 80%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  mask-image: linear-gradient(to bottom,
+      rgba(16, 25, 34, 1) 5%,
+      rgba(16, 25, 34, 0) 80%);
   width: 100%;
   position: relative;
   margin: auto;
-  }
+}
 
 
-/**/
-
-.texto2,.texto1 {
+.texto2,
+.texto1 {
   height: 45%;
   display: flex;
   text-align: center;
@@ -180,15 +179,12 @@ nav {
   }
 }
 
-
-
 .texto {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-top: -90px;
 }
-
 
 .texto1 {
   margin-top: -40px;
