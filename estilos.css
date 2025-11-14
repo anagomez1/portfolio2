@@ -109,6 +109,12 @@ header div a{
     font-size: 0.875rem;
     font-weight: 700;
     text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover, &:focus{
+    transform: scale(0.95);
+      
+  }
 }
 
 main > section:nth-child(1) {
@@ -212,12 +218,6 @@ main, section {
   justify-content: center;
   margin: auto;
   gap: 5rem;
-
-article{
-  align-items: stretch;
-  margin-bottom: 100px;
-
-}
 }
 
 
@@ -236,10 +236,18 @@ label{
   color:var(--secondary-lt);
   font-style: italic;
   cursor: pointer;
+  transition: all 0.2s;
+  
+  &:hover,&:focus{
+    background: var(--primary-bg);
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+  }
 }
 
 label::before{
-  content: "Leer más"
+  content: "Leer más";
+  
 }
 
 input[type="checkbox"]:checked~label::before{
